@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossingKitty.GamePlayPage"
+             Title="GamePlayPage">
+
+    <Grid x:Name="MainGrid" Padding="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="TimeLabel"
+               Text="Time: 00:00"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+               FontSize="20"
+               Grid.Row="0" />
+
+        <Label x:Name="ScoreLabel"
+               Text="Score: 0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontSize="20"
+               Grid.Row="0"/>
+
+        <Label x:Name="LivesLabel"
+        Text="Lives: 3"
+        HorizontalOptions="End"
+        VerticalOptions="Center"
+        FontSize="20"
+        Grid.Row="0"/>
+
+
+        <Grid x:Name="GameGrid"
+              Grid.Row="1"
+              Padding="10">
+            <Image Source="road.png" Aspect="AspectFill" />
+
+            <Image x:Name="PlayerImg" Source="player.png" WidthRequest="50" HeightRequest="50" />
+        </Grid>
+        
+    </Grid>
+    
+</ContentPage>
